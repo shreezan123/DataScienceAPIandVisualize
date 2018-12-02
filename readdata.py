@@ -12,4 +12,4 @@ def make_csv():
             writer.writerow(row)
 
 if __name__ == '__main__':
-    # make_csv()
+    make_csv()
