@@ -47,11 +47,11 @@ old_df.plot.line(x = 'reference_period_desc',y = 'Value')
 plt.show()
 ```
 ### Following plots were observed:
-<img src = 'https://i.imgur.com/2Bf0N8R.png' width = "300" height = "300">
+<img src = 'https://i.imgur.com/2Bf0N8R.png' width = "500" height = "500">
 
 This is a plot observed for 2009 and beyond. The line chart suggests that the pattern is consistently repeating for this period. Upon looking at the data, the peak portion in the plot is for the annual value. So the annual value for each period is almost the same for these years.    
 
-<img src = 'https://i.imgur.com/LMXT5HN.png' width = "300" height = "300">
+<img src = 'https://i.imgur.com/LMXT5HN.png' width = "500" height = "500">
 
 This is a plot observed for 1989 to 2009. The plot shows that the value for each month is "fairly" consistent but it is slightly decreasing towards the end i.e. 1989. 
 The value of 1,721,000 is the lowest for February 1989, which can also be seen in the dip of the line chart. 
@@ -65,61 +65,60 @@ print df.groupby('year')['Value'].median()
 ```
 The results came out to be: 
 **Mean**
-1989    2.202583e+06
-1990    2.551500e+06
-1991    2.561833e+06
-1992    2.835500e+06
-1993    3.040000e+06
-1994    3.148583e+06
-1995    3.086417e+06
-1996    3.203833e+06
-1997    2.997417e+06
-1998    2.915400e+06
-1999    3.094417e+06
-2000    3.025700e+06
-2001    5.703231e+06
-2002    5.975900e+06
-2003    3.524800e+07
-2008    2.902500e+07
-2009    4.293692e+06
-2010    4.282000e+06
-2011    4.240615e+06
-2012    4.194154e+06
-2013    4.034923e+06
-2014    4.072308e+06
-2015    4.108462e+06
-2016    4.181846e+06
-2017    4.112154e+06
-2018    2.248200e+06
+1989    2.202583e+06<br>
+1990    2.551500e+06<br>
+1991    2.561833e+06<br>
+1992    2.835500e+06<br>
+1993    3.040000e+06<br>
+1994    3.148583e+06<br>
+1995    3.086417e+06<br>
+1996    3.203833e+06<br>
+1997    2.997417e+06<br>
+1998    2.915400e+06<br>
+1999    3.094417e+06<br>
+2000    3.025700e+06<br>
+2001    5.703231e+06<br>
+2002    5.975900e+06<br>
+2003    3.524800e+07<br>
+2008    2.902500e+07<br>
+2009    4.293692e+06<br>
+2010    4.282000e+06<br>
+2011    4.240615e+06<br>
+2012    4.194154e+06<br>
+2013    4.034923e+06<br>
+2014    4.072308e+06<br>
+2015    4.108462e+06<br>
+2016    4.181846e+06<br>
+2017    4.112154e+06<br>
+2018    2.248200e+06<br>
 
 **Median**
-1989     2251500.0
-1990     2518500.0
-1991     2562500.0
-1992     2808500.0
-1993     3060000.0
-1994     3130000.0
-1995     3162500.0
-1996     3178500.0
-1997     3021000.0
-1998     3030000.0
-1999     3087000.0
-2000     2990000.0
-
-2001     3076000.0
-2002     2966000.0
-2003    35248000.0
-2008    29025000.0
-2009     2315000.0
-2010     2388000.0
-2011     2306000.0
-2012     2218000.0
-2013     2234000.0
-2014     2214000.0
-2015     2269000.0
-2016     2267000.0
-2017     2303000.0
-2018     2281000.0
+1989     2251500.0<br>
+1990     2518500.0<br>
+1991     2562500.0<br>
+1992     2808500.0<br>
+1993     3060000.0<br>
+1994     3130000.0<br>
+1995     3162500.0<br>
+1996     3178500.0<br>
+1997     3021000.0<br>
+1998     3030000.0<br>
+1999     3087000.0<br>
+2000     2990000.0<br>
+2001     3076000.0<br>
+2002     2966000.0<br>
+2003    35248000.0<br>
+2008    29025000.0<br>
+2009     2315000.0<br>
+2010     2388000.0<br>
+2011     2306000.0<br>
+2012     2218000.0<br>
+2013     2234000.0<br>
+2014     2214000.0<br>
+2015     2269000.0<br>
+2016     2267000.0<br>
+2017     2303000.0<br>
+2018     2281000.0<br>
 
 ## Challenges
 
