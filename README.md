@@ -63,8 +63,8 @@ Mean and median were two aggregation functions that were used. First the columns
 print df.groupby('year')['Value'].mean()
 print df.groupby('year')['Value'].median()
 ```
-The results came out to be: 
-**Mean**
+The results came out to be:<br>
+**Mean**<br>
 1989    2.202583e+06<br>
 1990    2.551500e+06<br>
 1991    2.561833e+06<br>
@@ -92,7 +92,7 @@ The results came out to be:
 2017    4.112154e+06<br>
 2018    2.248200e+06<br>
 
-**Median**
+**Median**<br>
 1989     2251500.0<br>
 1990     2518500.0<br>
 1991     2562500.0<br>
