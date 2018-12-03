@@ -1,4 +1,4 @@
-# Group Project  - *Using API, Analyzing and Visualizing Data*
+# Group Project  - *Getting Data from API, Analyzing and Visualizing Data*
 
 
 ## Part 1: Making an API GET Request and saving to a csv file
@@ -119,6 +119,91 @@ The results came out to be:<br>
 2016     2267000.0<br>
 2017     2303000.0<br>
 2018     2281000.0<br>
+
+## Part 3: Fitting Data
+
+### Fitting Data for January to October 2017
+
+Different criteria were created to create a dataframe for the months of January-October.
+```
+first_criteria = df['year'].map(lambda x:x == 2017)
+second_criteria = df['freq_desc'].map(lambda x: x != 'ANNUAL')
+third_criteria = df['reference_period_desc'].map(lambda x: x!= 'DEC' and x!= 'NOV')
+```
+Then the dataframe was created
+```
+fit_df = df[first_criteria][second_criteria][third_criteria]
+```
+As this is a linear regressor, there should be independent and dependent variable. Here Value is a dependent variable which depends on independent variable Month (reference_period_desc).  ```sklearn.linear_model``` library is used to fit the data and create a best line that aims to capture most of the data. The X and Y axes for fitting the data is created as: 
+```
+X=[0,1,2,3,4,5,6,7,8,9]
+X = np.array(X).reshape((len(X),1))
+y=fit_df['Value'].values
+```
+Then ```LinearRegression``` library is used to fit the data as:
+```
+model = LinearRegression()
+model.fit(X,y)
+```
+Then data is plotted in the following way to create a linear regression model:
+```
+fit_df.plot(x = 'reference_period_desc',y = 'Value',title = 'JAN to OCT 2D plot',style = 'o')
+plt.plot(X,model.predict(X),color='k')
+plt.show()
+```
+The plot came as follows. The image is zoomed in so it might not look like the regression line captures most of the data but in reality this is the best fitting model.
+<img src = 'https://images2.imgbox.com/d2/a6/bvSbWvQw_o.png' width = "500" height = "500">
+
+### Predicting value for November
+
+The ```predict``` function was used to predict value for November. The value for november came out to be: ***2373133.33333333***
+The code is as follows:
+```
+global predictedValue
+predictedValue = model.predict([[10]])
+print "Prediction for the month of November is: ", predictedValue
+```
+
+### Computing absolute error
+
+The absolute error was simply calculated using native ```abs``` function in Python. It came out to be: ***41133.33333333***  
+```
+absolute_error = abs(predictedValue-2332000)
+print "The absolute error is: ",absolute_error
+```
+
+### Computing coefficient of determination/ R^2
+
+R^2 was calculated using score function as follows: The value came out to be: 0.16351145981204795
+```
+print "R squared score is: ", model.score(X,y)
+
+```
+
+### Fitting Data for January to December 2017
+
+The approach for this is similar to the one mentioned above. Several criteria were created and dataframe was created by the following lines of code:
+```
+forth_criteria = df["year"].map(lambda x:x == 2017)
+fifth_criteria = df["freq_desc"].map(lambda x:x != 'ANNUAL')
+df_2017 = df[forth_criteria][fifth_criteria]
+```
+Then X and Y variables for the regressor were created as: 
+```
+X=[0,1,2,3,4,5,6,7,8,9,10,11]
+X = np.array(X).reshape((len(X),1))
+y = df_2017['Value'].values
+```
+The data was fitted using ```LinearRegression``` function as:
+```
+df_2017.plot(x = 'reference_period_desc',y = 'Value',title = '2D plot for 2017',style = 'o')
+model = LinearRegression()
+model.fit(X,y)
+plt.plot(X,model.predict(X),color='k')
+plt.show()
+```
+The plot came as follows. The image is zoomed in so it might not look like the regression line captures most of the data but in reality this is the best fitting model.
+<img src = "https://images2.imgbox.com/eb/a8/29sGWTdA_o.png">
 
 ## Challenges
 
