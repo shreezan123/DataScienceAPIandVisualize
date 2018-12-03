@@ -152,7 +152,8 @@ plt.plot(X,model.predict(X),color='k')
 plt.show()
 ```
 The plot came as follows. The image is zoomed in so it might not look like the regression line captures most of the data but in reality this is the best fitting model.
-<img src = 'https://images2.imgbox.com/d2/a6/bvSbWvQw_o.png' width = "500" height = "500">
+<br>
+<img src = 'https://images2.imgbox.com/d2/a6/bvSbWvQw_o.png'>
 
 ### Predicting value for November
 
@@ -211,3 +212,7 @@ The plot came as follows. The image is zoomed in so it might not look like the r
 * Learning how to index dataframe by creating a lambda function and temporary boolean column (which I have named as **first_criteria** and **second_criteria**)
 * Using logical criteria in dataframe using *map* in Python to create different dataframe based on **Year** field. 
 * Learning to use aggregation function (mean and median) with group by in Python as I only knew how to do this in mySQL.
+* Learning what Linear Regression actually is.
+* Identifying dependent and independent variables in our case.
+* Learning functions within sklearn library to fit the data, calculate R squared score and predict the data
+
