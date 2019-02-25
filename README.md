@@ -1,4 +1,4 @@
-# Group Project  - *Getting Data from API, Analyzing and Visualizing Data*
+# *Getting Data from API, Analyzing and Visualizing Data*
 
 
 ## Part 1: Making an API GET Request and saving to a csv file
